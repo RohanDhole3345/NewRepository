@@ -1,4 +1,4 @@
-file = r"C:\Users\ASUS\OneDrive\Desktop\Python 2025\Tasks\task-1\small" \
+file = r"C:\Users\ASUS\OneDrive\Desktop\Python 2025\Tasks\small" \
 ".log"
 
 InfoCount = 0
