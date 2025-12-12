@@ -7,20 +7,20 @@ file=r"C:\Users\ASUS\OneDrive\Desktop\Python 2025\Tasks\small.log"
 pattern=r"\[(\d{4}-\d{2}-\d{2}) (\d{2}:\d{2}:\d{2})\]"
 
 timestamps=[]      # for time range
-error_per_day ={}   # normal dictionary for counting errors per day
+error_per_day={}   # normal dictionary for counting errors per day
 
 #------------------------------------------------------------------------------
 #Second Task→Time Range
-with open(file, "r") as f:
+with open(file,"r") as f:
     for line in f:
-        match =re.search(pattern, line)
+        match=re.search(pattern, line)
         if match:
             # combine group(1) date + group(2) time
             full_ts=match.group(1)+" "+match.group(2)
             timestamps.append(full_ts)
 
 # Convert all timestamps→datetime list
-dt_list = [datetime.strptime(t, "%Y-%m-%d %H:%M:%S") for t in timestamps]
+dt_list = [datetime.strptime(t,"%Y-%m-%d %H:%M:%S") for t in timestamps]
 
 # Find earliest and latest time
 start_time=min(dt_list)
